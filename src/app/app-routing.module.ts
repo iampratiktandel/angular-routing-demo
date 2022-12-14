@@ -56,6 +56,10 @@ const routes: Routes = [
         redirectTo: 'list'
       }
     ]
+  },
+  {
+    path: 'hr',
+    loadChildren: () => import('./hr/hr.module').then(m => m.HrModule)
   }
 ];
 
