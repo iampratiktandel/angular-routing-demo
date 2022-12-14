@@ -20,4 +20,9 @@ export class MentorFormComponent implements OnInit {
     // this.router.navigateByUrl('mentor/list');
   }
 
+  onCancel() {
+    this.router.navigate(['mentor', 'list']);
+    // this.router.navigateByUrl('mentor/list');
+  }
+
 }

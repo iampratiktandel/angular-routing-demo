@@ -4,9 +4,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InternDetailComponent } from './intern/intern-detail/intern-detail.component';
 import { InternFormComponent } from './intern/intern-form/intern-form.component';
 import { InternListComponent } from './intern/intern-list/intern-list.component';
-import { MentorDetailComponent } from './mentor-detail/mentor-detail.component';
-import { MentorFormComponent } from './mentor-form/mentor-form.component';
-import { MentorListComponent } from './mentor-list/mentor-list.component';
+import { MentorDetailComponent } from './mentor/mentor-detail/mentor-detail.component';
+import { MentorFormComponent } from './mentor/mentor-form/mentor-form.component';
+import { MentorListComponent } from './mentor/mentor-list/mentor-list.component';
 
 const routes: Routes = [
   {
