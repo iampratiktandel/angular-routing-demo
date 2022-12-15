@@ -8,6 +8,8 @@ import { MentorFormComponent } from './mentor/mentor-form/mentor-form.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InternModule } from './intern/intern.module';
 import { MentorDetailComponent } from './mentor/mentor-detail/mentor-detail.component';
+import { StudentModule } from './student/student.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { MentorDetailComponent } from './mentor/mentor-detail/mentor-detail.comp
     MentorListComponent,
     MentorFormComponent,
     DashboardComponent,
-    MentorDetailComponent
+    MentorDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     InternModule,
+    StudentModule,
     AppRoutingModule
   ],
   exports: [],

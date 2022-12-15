@@ -7,8 +7,12 @@ import { InternListComponent } from './intern/intern-list/intern-list.component'
 import { MentorDetailComponent } from './mentor/mentor-detail/mentor-detail.component';
 import { MentorFormComponent } from './mentor/mentor-form/mentor-form.component';
 import { MentorListComponent } from './mentor/mentor-list/mentor-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { StudentFormComponent } from './student/student-form/student-form.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
 
 const routes: Routes = [
+  /** Basic Routing */
   {
     path: '',
     component: DashboardComponent
@@ -57,10 +61,43 @@ const routes: Routes = [
       }
     ]
   },
+  /** /Basic Routing */
+  /** Lazy Loading */
   {
     path: 'hr',
     loadChildren: () => import('./hr/hr.module').then(m => m.HrModule)
+  },
+  /** /Lazy Loading */
+  {
+    path: 'student',
+    children: [
+      {
+        path: '',
+        component: StudentListComponent
+      },
+      {
+        path: 'add',
+        component: StudentFormComponent
+      },
+      // {
+      //   path: '',
+      //   pathMatch: 'full',
+      //   redirectTo: ''
+      // }
+    ]
+  },
+  /** Lazy Loading */
+  { 
+    path: 'customer',
+    loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) 
+  },
+  /** /Lazy Loading */
+  /** Wildcard Route */
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
+  /** /Wildcard Route */
 ];
 
 @NgModule({
